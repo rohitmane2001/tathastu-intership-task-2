@@ -1,0 +1,363 @@
+Tathastu Scholar Program(Task-2 submission)
+
+name= mane rohit rohidas
+email=rohitmane2001@gmail.com
+
+Q.1 Write a Java program to perform basic Calculator operations.
+
+import java.util.Scanner;
+public class Main {
+   public static void main(String[] args) {
+      double num1;
+      double num2;
+      double ans;
+      char op;
+      System.out.println();
+      Scanner reader = new Scanner(System.in);
+      
+      System.out.print("Enter two numbers for basic arthematic operation: ");
+      num1 = reader.nextDouble();
+      num2 = reader.nextDouble();
+      System.out.print("\nEnter an operator (+, -, *, /,%): ");
+      op = reader.next().charAt(0);
+      switch(op) {
+         case '+': ans = num1 + num2;
+            break;
+         case '-': ans = num1 - num2;
+            break;
+         case '*': ans = num1 * num2;
+            break;
+         case '/': ans = num1 / num2;
+            break;
+        case '%': ans=num1%num2;
+            break;
+      default: System.out.printf("Error! Enter correct operator");
+         return;
+      }
+      System.out.print("\nThe result is given as follows:\n");
+      System.out.printf(num1 + " " + op + " " + num2 + " = " + ans);
+   }
+}
+
+test link -https://onlinegdb.com/HiHC1_Arh
+
+
+
+
+
+
+Q.2 Write a Java program to calculate Fibonacci Series up to n numbers.
+
+import java.util.*;
+ 
+class Main
+{
+ public static void main(String args[])
+ {
+         int i,c=0,n;
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Enter a number to generate fibonacci series upto nth term");
+     n=sc.nextInt();
+   int a=0;
+   int b=1;
+ 
+ System.out.println("Fibonacci series upto "+n+" is :-");
+   while(c<=n)
+   {
+       System.out.print(c+" ");
+       a=b;
+       b=c;
+       c=a+b;
+   }
+ }
+}
+
+
+test link-https://onlinegdb.com/lTNK6Pa_Y
+
+
+
+
+Q.3 Write a Java program to calculate a Factorial of a number.
+
+import java.util.Scanner;
+public class Main {
+   public static void main(String args[]){
+      int i =1, factorial=1, number;
+      System.out.println("Enter the number to which you need to find the factorial:");
+      Scanner sc = new Scanner(System.in);
+      number = sc.nextInt();
+
+      while(i <=number) {
+         factorial = factorial * i;
+         i++;
+      }
+      System.out.println("Factorial of the given number is:: "+factorial);
+   }
+}
+
+
+test link -https://onlinegdb.com/HuAO97Yhd
+
+
+
+
+Q.4 Write a Java program to find out whether the given String is Palindrome or not.
+
+import java.util.Scanner;
+ 
+class Main
+{
+   public static void main(String args[])
+   {
+      String str, rev = "";
+      Scanner sc = new Scanner(System.in);
+ 
+      System.out.println("Enter a string:");
+      str = sc.nextLine();
+ 
+      int length = str.length();
+ 
+      for ( int i = length - 1; i >= 0; i-- )
+         rev = rev + str.charAt(i);
+ 
+      if (str.equals(rev))
+         System.out.println(str+" is a palindrome");
+      else
+         System.out.println(str+" is not a palindrome");
+ 
+   }
+}
+
+test link-https://onlinegdb.com/zQDL0zrNiF
+
+
+Q.5 Write a Java program to calculate Permutation and Combination of 2 numbers.
+
+import java.util.Scanner;
+
+public class Main {
+
+	private static Scanner sc;
+	
+	public static void main(String[] args) {
+		
+		sc = new Scanner(System.in);
+		int n, r, NCR, NPR;
+		
+		System.out.print("Please Enter n Value = ");
+		n = sc.nextInt();
+		System.out.print("Please Enter r Value = ");
+		r = sc.nextInt();
+		
+		NCR = fact(n)/(fact(n - r) * fact(r));
+		NPR = fact(n)/fact(n - r);
+		
+		System.out.println("NCR Value(combination) = " + NCR);
+		System.out.println("NPR Value(permutation) = " + NPR);
+	}
+	
+	public static int fact(int number) {
+		if(number == 0 || number == 1) {
+			return 1;
+		}
+		else {
+			return number * fact(number - 1);
+		}
+	}
+}
+
+test link -https://onlinegdb.com/7hRIriJ3Y
+
+
+
+Q.6 Write a program in Java to print Diamond Pattern.
+
+import java.util.*;
+
+public class Main
+{
+   public static void main(String[] args)
+   {
+      int  i, j, space;
+      Scanner sc=new Scanner(System.in);
+      System.out.println("enter your no. of rows");
+      int row=sc.nextInt();
+      
+      for(i=0; i<row; i++)
+      {
+         for(space=i; space<(row-1); space++)
+            System.out.print(" ");
+         for(j=0; j<(i*2)+1; j++)
+            System.out.print("*");
+         System.out.print("\n");
+      }
+      for(i=0; i<(row-1); i++)
+      {
+         for(space=i; space>=0; space--)
+            System.out.print(" ");
+         for(j=(row*2)-3; j>(i*2); j--)
+            System.out.print("*");
+         System.out.print("\n");
+      }
+   }
+}
+
+test link-https://onlinegdb.com/vpL4GruRR
+
+
+
+Q.7 Write a Java Program to reverse the letters present in the given String.
+
+import java.io.*;
+import java.util.Scanner;
+
+class Main {
+	public static void main (String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter your string for reverse:");
+	String str=sc.next();
+
+		char ch;
+		String nstr="";
+	
+	System.out.print("Original word: ");
+	System.out.println(str); 
+	
+	for (int i=0; i<str.length(); i++)
+	{
+		ch= str.charAt(i); 
+		nstr= ch+nstr; 
+	}
+	System.out.println("Reversed word: "+ nstr);
+	}
+}
+
+
+
+test link-https://onlinegdb.com/3c7qmy0qy
+
+
+
+Q.8 Write a Java Program to check whether the given array is Mirror Inverse or not.
+
+public class Main {
+
+
+	static boolean isMirrorInverse(int arr[])
+	{
+		for (int i = 0; i < arr.length; i++) {
+
+		
+			if (arr[arr[i]] != i)
+				return false;
+		}
+
+
+		return true;
+	}
+
+	
+	public static void main(String[] args)
+	{
+		int arr[] = { 1, 2, 2, 1 };
+		if (isMirrorInverse(arr))
+			System.out.println("Yes");
+		else
+			System.out.println("No");
+	}
+}
+
+
+test link - https://onlinegdb.com/_aAnDbVoP
+
+
+
+
+Q.9 Write a Java program to remove elements from an ArrayList
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class GFG {
+	
+	public static void main(String[] args)
+	{
+		
+		List<Integer> al = new ArrayList<>();
+
+		
+		al.add(10);
+		al.add(20);
+		al.add(30);
+		al.add(1);
+		al.add(2);
+
+	
+		System.out.println(al);
+		
+
+		
+		al.remove(1);
+
+	
+		al.remove(1);
+
+
+		System.out.println(al);
+	}
+}
+
+
+
+test link-https://onlinegdb.com/dsjuoHeSL
+
+
+
+
+Q.10 Write a Java Program to find the Transpose of a given Matrix.
+
+public class Main    
+{    
+    public static void main(String[] args) {    
+        int rows, cols;    
+            
+           
+          int a[][] = {    
+                          {1, 2, 3},    
+                          {4, 5, 6},    
+                          {7, 8, 9}    
+                       };    
+              
+             
+          rows = a.length;    
+        cols = a[0].length;    
+            
+        
+        int t[][] = new int[cols][rows];    
+            
+           
+        for(int i = 0; i < cols; i++){    
+            for(int j = 0; j < rows; j++){    
+                    
+                t[i][j] = a[j][i];    
+            }    
+        }    
+        
+        System.out.println("Transpose of given matrix: ");    
+        for(int i = 0; i < cols; i++){    
+            for(int j = 0; j < rows; j++){    
+               System.out.print(t[i][j] + " ");    
+            }    
+            System.out.println();    
+        }    
+    }    
+}  
+
+
+
+test link- https://onlinegdb.com/7ltvE4oXs
+
+
+
