@@ -1,0 +1,30 @@
+Q.2 Write a Java program to calculate Fibonacci Series up to n numbers.
+
+import java.util.*;
+ 
+class Main
+{
+ public static void main(String args[])
+ {
+         int i,c=0,n;
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Enter a number to generate fibonacci series upto nth term");
+     n=sc.nextInt();
+   int a=0;
+   int b=1;
+ 
+ System.out.println("Fibonacci series upto "+n+" is :-");
+   while(c<=n)
+   {
+       System.out.print(c+" ");
+       a=b;
+       b=c;
+       c=a+b;
+   }
+ }
+}
+
+
+test link-https://onlinegdb.com/lTNK6Pa_Y
+
+
