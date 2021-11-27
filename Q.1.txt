@@ -1,0 +1,42 @@
+Tathastu Scholar Program(Task-2 submission)
+
+name= mane rohit rohidas
+email=rohitmane2001@gmail.com
+
+Q.1 Write a Java program to perform basic Calculator operations.
+
+import java.util.Scanner;
+public class Main {
+   public static void main(String[] args) {
+      double num1;
+      double num2;
+      double ans;
+      char op;
+      System.out.println();
+      Scanner reader = new Scanner(System.in);
+      
+      System.out.print("Enter two numbers for basic arthematic operation: ");
+      num1 = reader.nextDouble();
+      num2 = reader.nextDouble();
+      System.out.print("\nEnter an operator (+, -, *, /,%): ");
+      op = reader.next().charAt(0);
+      switch(op) {
+         case '+': ans = num1 + num2;
+            break;
+         case '-': ans = num1 - num2;
+            break;
+         case '*': ans = num1 * num2;
+            break;
+         case '/': ans = num1 / num2;
+            break;
+        case '%': ans=num1%num2;
+            break;
+      default: System.out.printf("Error! Enter correct operator");
+         return;
+      }
+      System.out.print("\nThe result is given as follows:\n");
+      System.out.printf(num1 + " " + op + " " + num2 + " = " + ans);
+   }
+}
+
+test link -https://onlinegdb.com/HiHC1_Arh
