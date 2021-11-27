@@ -1,0 +1,30 @@
+Q.7 Write a Java Program to reverse the letters present in the given String.
+
+import java.io.*;
+import java.util.Scanner;
+
+class Main {
+	public static void main (String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter your string for reverse:");
+	String str=sc.next();
+
+		char ch;
+		String nstr="";
+	
+	System.out.print("Original word: ");
+	System.out.println(str); 
+	
+	for (int i=0; i<str.length(); i++)
+	{
+		ch= str.charAt(i); 
+		nstr= ch+nstr; 
+	}
+	System.out.println("Reversed word: "+ nstr);
+	}
+}
+
+
+
+test link-https://onlinegdb.com/3c7qmy0qy
+
